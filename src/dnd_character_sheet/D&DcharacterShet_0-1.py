@@ -10,8 +10,6 @@ lista_classi = ['BARBARIAN', 'BARD','CLERIC','DRUID','FIGHTER','MONK','PALADIN',
 selezionaClasse = StringVar()
 selezionaClasse.set(lista_classi[0])
 
-
-
 # canvas nome personaggio
 nome_personaggio = Label(text='HIMO',fg='white',bg='gray43',width=10,height=1,font = 'Helvetica 50 bold').grid(row=0,column=0,sticky=N)
 etichetta_nomePersonaggio = Label (text='CHARACTER NAME' ,fg='gray34',bg='DarkGoldenrod1',width=31,height=1).grid(row=0,column=0,sticky=S)
