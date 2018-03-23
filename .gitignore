@@ -16,6 +16,7 @@ __pycache__/*
 .ropeproject
 .project
 .pydevproject
+.pytest_cache
 .settings
 .idea
 
