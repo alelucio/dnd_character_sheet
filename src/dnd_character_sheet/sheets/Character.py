@@ -43,3 +43,6 @@ class Character:
 
     def setClass(self, newCharacterClass):
         self._characterClass = newCharacterClass
+
+
+

@@ -32,3 +32,4 @@ def test_unvalid_character_levels():
     character = Character()
     character.addExperience(100000)
     assert character.getLevel() is None, "A character can't go over 99999, over-experienced warriors can't find a job"
+
