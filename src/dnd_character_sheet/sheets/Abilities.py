@@ -1,3 +1,7 @@
+from dnd_character_sheet.sheets.Dice import d20
+
+proficiencyBonus = 4
+
 class Abilities:
     strength = 1
     dexterity = 1
@@ -33,6 +37,18 @@ class Abilities:
 class AbilitySkillsStrength:
     savingThrowsStrength = 0
     athletics = 0
+
+    def trowSavingTrowsStrength (self):
+        if self.savingThrowsStrength == 0:
+            return d20() + Abilities.getModifierStrength
+        elif self.savingThrowsStrength == 1:
+            return d20() + Abilities.getModifierStrength + proficiencyBonus
+
+    def trowAthletics (self):
+        if self.athletics == 0:
+            return d20() + Abilities.getModifierStrength
+        elif self.athletics == 1:
+            return d20() + Abilities.getModifierStrength
 
 class AbilitySkillsDexterity:
     savingThrowsDexterity = 0
