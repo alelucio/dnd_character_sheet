@@ -3,6 +3,7 @@
 
 #import pytest
 from dnd_character_sheet.sheets.Abilities import Abilities #classe
+from dnd_character_sheet.sheets.Dice import d20
 
 __author__ = "Alessandro Luciani"
 __copyright__ = "Alessandro Luciani"
@@ -27,6 +28,16 @@ def test_abilities():
     assert abilities.getModifierIntelligence() == -5
     assert abilities.getModifierWisdom() == -5
     assert abilities.getModifierCharisma() == -5
+
+def test_merda():
+    abilities = Abilities()
+    abilities.strength = 10
+    abilities.savingThrowsStrength = 0
+    # come faccio a mettere la funzione d20?... non è dentro la classe ability (vorrei mettere d20 = 15)
+    assert abilities.trowSavingTrowsStrength() == 15
+
+
+
 
 
 
