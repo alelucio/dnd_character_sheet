@@ -42,11 +42,13 @@ class CharacterRace(Enum):
     HALF_ORC = 8
     TIEFLING = 9
 
+damage = 10
 
 # Per ora questa classe può rimanere senza costruttore
 # La miglioreremo quando ti sentirai a tuo agio con le classi
 class Character:
-    LEVELS = [0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000, 120000, 140000, 165000, 195000, 225000, 265000, 305000, 355000]  # Questa è una costante quindi il nome sarà tutto maiuscolo
+    LEVELS = [0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000, 120000, 140000, 165000, 195000,
+              225000, 265000, 305000, 355000]  # Questa è una costante quindi il nome sarà tutto maiuscolo
 
     _experience = 0  # Esperienza iniziale del personaggio
 
@@ -55,6 +57,8 @@ class Character:
     _characterAlignment = CharacterAlignment.NO_ALIGNMENT
 
     _characterRace = CharacterRace.NO_RACE
+
+    -characterEnergy = 100
 
     def getLevel(self):
         for currentLevel, nextLevelPoints in enumerate(self.LEVELS):
@@ -85,3 +89,6 @@ class Character:
 
     def setRace(self, newRace):
         self._characterRace = newRace
+
+    def actualEnergy(self, damage):
+        self.characterEnergy = self.characterEnergy - damage

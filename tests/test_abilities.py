@@ -29,12 +29,18 @@ def test_abilities():
     assert abilities.getModifierWisdom() == -5
     assert abilities.getModifierCharisma() == -5
 
-def test_merda():
+def test_skills_strength():
     abilities = Abilities()
     abilities.strength = 10
-    abilities.savingThrowsStrength = 0
-    # come faccio a mettere la funzione d20?... non è dentro la classe ability (vorrei mettere d20 = 15)
+    abilities.savingThrowsStrength = False
+    # mock dado
     assert abilities.trowSavingTrowsStrength() == 15
+    abilities.strength = 10
+    abilities.savingThrowsStrength = True
+    # proficiencyBonus = 4
+    # mock dado
+    assert abilities.trowSavingTrowsStrength() == 15
+
 
 
 
