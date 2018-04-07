@@ -36,6 +36,12 @@ def test_unvalid_character_levels():
 
 def test_energy():
     character = Character()
-    character.characterEnergy = 100
-    damage = 10
-    assert character.actualEnergy() == 90
+    # Di default hai messo l'energia a 100
+    # Quindi non ti serve ridefinirla ancora
+    # Il nome actual energy non è il massimo
+    # quello che fa quella funzione è applicare un danno
+    # all'energia del personaggio
+    # può essere character.danneggia(10)
+
+    character.actualEnergy(10)
+    assert character.getEnergy() == 90
