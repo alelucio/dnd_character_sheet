@@ -1,6 +1,9 @@
-from dnd_character_sheet.sheets.Dice import d8
-hit = 10
-class Health:
-    _MHP = 84
-    _
+danno = 10
 
+
+class Health:
+    maxHealthPoint = 84
+
+    def actualHealthPoint(self, danno):
+        self.maxHealthPoint = self.maxHealthPoint - danno
+        print(Health.maxHealthPoint)
