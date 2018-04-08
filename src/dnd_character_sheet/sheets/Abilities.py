@@ -86,9 +86,9 @@ class Abilities:
 
     def trowStealth(self):
         if self.stealth:
-            return self.dice(20) + self.getModifierDexterity()
+            return self.die(20) + self.getModifierDexterity()
         else:
-            return self.dice(20) + self.getModifierDexterity() + proficiencyBonus
+            return self.die(20) + self.getModifierDexterity() + proficiencyBonus
 
 
     # CONSTITUTION SKILLS
@@ -98,9 +98,9 @@ class Abilities:
 
     def trowSavingThrowsConstitution(self):
         if self.savingThrowsConstitution:
-            return self.dice(20) + self.getModifierConstitution()
+            return self.die(20) + self.getModifierConstitution()
         else:
-            return self.dice(20) + self.getModifierConstitution() + proficiencyBonus
+            return self.die(20) + self.getModifierConstitution() + proficiencyBonus
 
     # INTELLIGENCE SKILLS
 
@@ -110,9 +110,9 @@ class Abilities:
 
     def trowSavingThrowsIntelligence(self):
         if self.savingThrowIntelligence:
-            return self.dice(20) + self.getModifierIntelligence()
+            return self.die(20) + self.getModifierIntelligence()
         else:
-            return self.dice(20) + self.getModifierIntelligence() + proficiencyBonus
+            return self.die(20) + self.getModifierIntelligence() + proficiencyBonus
 
 
     arcana = False
@@ -120,9 +120,9 @@ class Abilities:
 
     def trowArcana(self):
         if self.arcana:
-            return self.dice(20) + self.getModifierIntelligence()
+            return self.die(20) + self.getModifierIntelligence()
         else:
-            return self.dice(20) + self.getModifierIntelligence() + proficiencyBonus
+            return self.die(20) + self.getModifierIntelligence() + proficiencyBonus
 
 
     history = False
@@ -130,9 +130,9 @@ class Abilities:
 
     def trowHistory(self):
         if self.history:
-            return self.dice(20) + self.getModifierIntelligence()
+            return self.die(20) + self.getModifierIntelligence()
         else:
-            return self.dice(20) + self.getModifierIntelligence() + proficiencyBonus
+            return self.die(20) + self.getModifierIntelligence() + proficiencyBonus
 
 
     investigation = False
@@ -140,25 +140,25 @@ class Abilities:
 
     def trowInvestigation(self):
         if self.investigation:
-            return self.dice(20) + self.getModifierIntelligence()
+            return self.die(20) + self.getModifierIntelligence()
         else:
-            return self.dice(20) + self.getModifierIntelligence() + proficiencyBonus
+            return self.die(20) + self.getModifierIntelligence() + proficiencyBonus
 
     nature = False
 
     def trowNature(self):
         if self.nature:
-            return self.dice(20) + self.getModifierIntelligence()
+            return self.die(20) + self.getModifierIntelligence()
         else:
-            return self.dice(20) + self.getModifierIntelligence() + proficiencyBonus
+            return self.die(20) + self.getModifierIntelligence() + proficiencyBonus
 
     religion = False
 
     def trowReligion(self):
         if self.religion:
-            return self.dice(20) + self.getModifierIntelligence()
+            return self.die(20) + self.getModifierIntelligence()
         else:
-            return self.dice(20) + self.getModifierIntelligence() + proficiencyBonus
+            return self.die(20) + self.getModifierIntelligence() + proficiencyBonus
 
     # WISDOM SKILLS
 
@@ -166,49 +166,49 @@ class Abilities:
 
     def trowSavingTrowWisdom(self):
         if self.savingThrowsWisdom:
-            return self.dice(20) + self.getModifierWisdom()
+            return self.die(20) + self.getModifierWisdom()
         else:
-            return self.dice(20) + self.getModifierWisdom() + proficiencyBonus
+            return self.die(20) + self.getModifierWisdom() + proficiencyBonus
 
     animalHandling = False
 
     def trowAnimalHandling(self):
         if self.animalHandling:
-            return self.dice(20) + self.getModifierWisdom()
+            return self.die(20) + self.getModifierWisdom()
         else:
-            return self.dice(20) + self.getModifierWisdom() + proficiencyBonus
+            return self.die(20) + self.getModifierWisdom() + proficiencyBonus
 
     insight = False
 
     def trowInsight(self):
         if self.insight:
-            return self.dice(20) + self.getModifierWisdom()
+            return self.die(20) + self.getModifierWisdom()
         else:
-            return self.dice(20) + self.getModifierWisdom() + proficiencyBonus
+            return self.die(20) + self.getModifierWisdom() + proficiencyBonus
 
     medicine = False
 
     def trowMedicine(self):
         if self.medicine:
-            return self.dice(20) + self.getModifierWisdom()
+            return self.die(20) + self.getModifierWisdom()
         else:
-            return self.dice(20) + self.getModifierWisdom() + proficiencyBonus
+            return self.die(20) + self.getModifierWisdom() + proficiencyBonus
 
     perception = False
 
     def trowPerception(self):
         if self.perception:
-            return self.dice(20) + self.getModifierWisdom()
+            return self.die(20) + self.getModifierWisdom()
         else:
-            return self.dice(20) + self.getModifierWisdom() + proficiencyBonus
+            return self.die(20) + self.getModifierWisdom() + proficiencyBonus
 
     survival = False
 
     def trowSurvival(self):
         if self.survival:
-            return self.dice(20) + self.getModifierWisdom()
+            return self.die(20) + self.getModifierWisdom()
         else:
-            return self.dice(20) + self.getModifierWisdom() + proficiencyBonus
+            return self.die(20) + self.getModifierWisdom() + proficiencyBonus
 
     # CHARISMA SKILLS
 
@@ -216,38 +216,38 @@ class Abilities:
 
     def trowSavingTrowCharisma(self):
         if self.savingThrowCharisma:
-            return self.dice(20) + self.getModifierCharisma()
+            return self.die(20) + self.getModifierCharisma()
         else:
-            return self.dice(20) + self.getModifierCharisma() + proficiencyBonus
+            return self.die(20) + self.getModifierCharisma() + proficiencyBonus
 
     deception = False
 
     def trowDeception(self):
         if self.deception:
-            return self.dice(20) + self.getModifierCharisma()
+            return self.die(20) + self.getModifierCharisma()
         else:
-            return self.dice(20) + self.getModifierCharisma() + proficiencyBonus
+            return self.die(20) + self.getModifierCharisma() + proficiencyBonus
 
     intimidation = False
 
     def trowIntimidation(self):
         if self.intimidation:
-            return self.dice(20) + self.getModifierCharisma()
+            return self.die(20) + self.getModifierCharisma()
         else:
-            return self.dice(20) + self.getModifierCharisma() + proficiencyBonus
+            return self.die(20) + self.getModifierCharisma() + proficiencyBonus
 
     performance = False
 
     def trowPerformance(self):
         if self.performance:
-            return self.dice(20) + self.getModifierCharisma()
+            return self.die(20) + self.getModifierCharisma()
         else:
-            return self.dice(20) + self.getModifierCharisma() + proficiencyBonus
+            return self.die(20) + self.getModifierCharisma() + proficiencyBonus
 
     persuasion = False
 
     def trowPersuasion(self):
         if self.persuasion:
-            return self.dice(20) + self.getModifierCharisma()
+            return self.die(20) + self.getModifierCharisma()
         else:
-            return self.dice(20) + self.getModifierCharisma() + proficiencyBonus
+            return self.die(20) + self.getModifierCharisma() + proficiencyBonus
