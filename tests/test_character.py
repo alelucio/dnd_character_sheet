@@ -43,5 +43,13 @@ def test_energy():
     # all'energia del personaggio
     # può essere character.danneggia(10)
 
-    character.actualEnergy(10)
+    
+    character.applyDamage(10)
     assert character.getEnergy() == 90
+    character.applyDamage(20)
+    character.applyDamage(30)
+    assert character.getEnergy() == 40
+    character.applyDamage(50)
+    assert character.getEnergy() == -10
+
+

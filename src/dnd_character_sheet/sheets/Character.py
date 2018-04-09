@@ -92,7 +92,7 @@ class Character:
     def setRace(self, newRace):
         self._characterRace = newRace
 
-    def actualEnergy(self, damage):
+    def applyDamage(self, damage):
         self._characterEnergy = self._characterEnergy - damage
 
     def getEnergy(self):
