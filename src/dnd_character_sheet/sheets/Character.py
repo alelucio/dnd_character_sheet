@@ -42,7 +42,9 @@ class CharacterRace(Enum):
     HALF_ORC = 8
     TIEFLING = 9
 
+
 damage = 10
+
 
 # Per ora questa classe può rimanere senza costruttore
 # La miglioreremo quando ti sentirai a tuo agio con le classi
@@ -58,7 +60,7 @@ class Character:
 
     _characterRace = CharacterRace.NO_RACE
 
-    -characterEnergy = 100
+    _characterEnergy = 100
 
     def getLevel(self):
         for currentLevel, nextLevelPoints in enumerate(self.LEVELS):
@@ -91,4 +93,7 @@ class Character:
         self._characterRace = newRace
 
     def actualEnergy(self, damage):
-        self.characterEnergy = self.characterEnergy - damage
+        self._characterEnergy = self._characterEnergy - damage
+
+    def getEnergy(self):
+        return self._characterEnergy

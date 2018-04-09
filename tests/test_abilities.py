@@ -3,7 +3,7 @@
 
 #import pytest
 from dnd_character_sheet.sheets.Abilities import Abilities #classe
-from dnd_character_sheet.sheets.Dice import d20
+from unittest.mock import Mock
 
 __author__ = "Alessandro Luciani"
 __copyright__ = "Alessandro Luciani"
@@ -30,7 +30,16 @@ def test_abilities():
     assert abilities.getModifierCharisma() == -5
 
 def test_skills_strength():
-    abilities = Abilities()
+
+    # Creo un dado tarocco che mi restituice sempre 15
+    # Si... Die è dado in inglese
+
+    die = Mock()
+    die.return_value = 15
+
+    # Creo Abilities impostando il dado tarocco
+    abilities = Abilities(die)
+
     abilities.strength = 10
     abilities.savingThrowsStrength = False
     # mock dado
