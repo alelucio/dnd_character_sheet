@@ -250,18 +250,3 @@ class Abilities:
     def getInitiative(self):
         return self.getModifierDexterity()
 
-    # la logica di questa funzione è quella che vedi ma semanticamente e sintatticamente non funziona perchè non so come dirglielo.. Helpme please :-)
-
-    def getDeathSaves(self):
-        if self.die(20) >= 10:
-            return True
-        elif self.die(20) <= 10:
-            return False
-        elif self.die(20) == 20:
-            return character.getEnergy() + 1
-        elif self.die(20) == 1:
-            return False x 2
-
-
-
-
