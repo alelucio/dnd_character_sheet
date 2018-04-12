@@ -73,7 +73,6 @@ class Character(Abilities):
 
     _characterEnergy = 100
 
-
     # Quando chiamo il costruttore di Character
     # lui chiama anche quello di Abilities
     def __init__(self, die=d):
